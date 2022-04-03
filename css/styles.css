@@ -728,7 +728,8 @@ margin-bottom: 12px;
   
 }
 .feedback-text {
-  display: flex;
+  display: block;
+  position: relative;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
@@ -745,9 +746,12 @@ textarea{
   resize: none;
 }
 
-.checkbox-text{
+.checkbox-text,
+.form-ckeckbox{
+  display: inline-block;
   font-size: 14px;
   line-height: 1.71;
+  vertical-align: middle;
  
 }
 .form-checkbox {
@@ -762,18 +766,14 @@ textarea{
   margin-left: auto;
   margin-right: auto;
 }
-.name-wrap {
-  position: relative;
-  
-}
+
 .feedback-name-icon {
   width: 18px;
   height: 18px;
   position: absolute;
-  top: 50%;
+  bottom: 11px;
   left: 12px;
   padding: 0;
-  transform: translateY(-50%);
 
   transition: fill 250ms var(--time-function);
 }
@@ -786,15 +786,7 @@ textarea{
   fill: var(--accent-color);
   border-color: var(--accent-color);
   cursor: pointer;
-
 }
-/* .feedback-input:hover,
-.feedback-input:focus {
-border-color: var(--accent-color);
-cursor: pointer;
-} */
-
-
 
 .coments .feedback-input {
   padding-left: 16px;
@@ -806,4 +798,30 @@ cursor: pointer;
 .form-feedback label{
   cursor: pointer;
 }
+.checkbox-label {
+  display: inline-block;
+  height: 24px;
+}
 
+.feedback-ckeckbox {
+  appearance: none;
+  position: absolute;
+}
+.chekbox-icon {
+  display: inline-block;
+  height: 15px;
+  width: 16px;
+  border: 1.5px solid var(--title-text-color);
+  border-radius: 2px;
+  vertical-align: middle;
+
+  transition: background-color 500ms var(--time-function), border-color 500ms var(--time-function);
+}
+.feedback-ckeckbox:checked + .chekbox-icon{
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  background-image: url('../images/icon-check.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center; 
+}

@@ -390,39 +390,43 @@
                 
                     <b class="form-feedback-header">Оставьте свои данные, мы вам перезвоним</b>
                     <div class="form-item">
-                        <label class="feedback-text" for="name">Имя</label>
-                        <div class="name-wrap">
-                            <input class="feedback-input" type="text" name="username" id="name"/>
+                        <label class="feedback-text">Имя
+                            <input class="feedback-input" type="text" name="username"/>
                             <svg class="feedback-name-icon" width="12" hight="12">
                                 <use href="./images/icons.svg#icon-person-black"></use>
                             </svg>
-                        </div>
+                        </label>
                     </div>
                     <div class="form-item">
-                        <label class="feedback-text" for="tel">Телефон</label>
-                        <div class="name-wrap">
-                            <input class="feedback-input"   type="tel" name="tel" id="tel"/>
+                        <label class="feedback-text">Телефон
+                            <input class="feedback-input"   type="tel" name="tel">
                             <svg class="feedback-name-icon" width="12" hight="12">
                                 <use href="./images/icons.svg#icon-phone-black"></use>
                             </svg>
-                        </div>
+                        </label>
+                      
                     </div>
                     <div class="form-item">
-                        <label class="feedback-text" for="email">Почта</label>
-                        <div class="name-wrap">
-                            <input class="feedback-input"  type="email" name="email" id="email"/>
+                        <label class="feedback-text">Почта
+                            <input class="feedback-input"  type="email" name="email"/>
                             <svg class="feedback-name-icon" width="12" hight="12">
                                 <use href="./images/icons.svg#icon-email-black"></use>
                             </svg>
-                        </div>
+                        </label>
+                        
                     </div>
                     <div class="form-item coments">
-                        <label class="feedback-text" for="coments">Комментарий</label>
-                        <textarea class="feedback-input"  name="coments" id="coments" rows="6" placeholder="Введите текст"></textarea>
+                        <label class="feedback-text">Комментарий
+                        <textarea class="feedback-input"  name="coments" rows="6" placeholder="Введите текст"></textarea>
+                        </label>
                     </div>
-                    <div class="form-checkbox">
-                        <input class="feedback-ckeckbox"  type="checkbox" name="policy" value="reading" id="policy"/>
-                        <label class="checkbox-text" for="policy">Соглашаюсь с рассылкой и принимаю <a href="" class="form-ckeckbox">Условия договора</a></label> 
+                    <div class="form-checkbox"> 
+                        <label class="checkbox-label">
+                            <input class="feedback-ckeckbox" type="checkbox" name="policy" value="reading"/> 
+                            <span class="chekbox-icon"></span> 
+                            <span class="checkbox-text">Соглашаюсь с рассылкой и принимаю</span>
+                            <a href="" class="form-ckeckbox">Условия договора</a>
+                        </label>
                     </div>
                 
                     <button type="submit" class="button main">Отправить</button>
