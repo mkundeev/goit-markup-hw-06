@@ -725,18 +725,28 @@ margin-bottom: 12px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   width: 100%;
   transition: border-color 250ms var(--time-function);
+  height: 40px;
 }
-.form-item {
-  margin-bottom: 10px;
-  
+
+.coments .feedback-input{
+  height: 120px;
+}
+
+
+.feedback-label {
+  margin-bottom: 10px; 
 }
 .feedback-text {
   display: block;
-  position: relative;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   margin-bottom: 4px;
+}
+
+.feedback-label {
+  position: relative;
+  display:block;
 }
 
 textarea::placeholder {
@@ -745,27 +755,25 @@ textarea::placeholder {
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-textarea{
-  resize: none;
-}
+
 
 .checkbox-text,
-.form-ckeckbox{
+.checkbox-label{
   display: inline-block;
   font-size: 14px;
   line-height: 1.71;
   vertical-align: middle;
- 
 }
-.form-checkbox {
+.checkbox-label {
   margin-bottom: 30px;
 }
-.form-checkbox a{
+.checkbox-label a{
   color: var(--accent-color);
   text-decoration: underline;
 }
 
-.form-feedback button{
+.form-feedback button,
+.checkbox-label{
   margin-left: auto;
   margin-right: auto;
 }
@@ -781,10 +789,13 @@ textarea{
   transition: fill 250ms var(--time-function);
 }
 
-.form-item:hover .feedback-input,
-.form-item:focus .feedback-input,
-.form-item:hover .feedback-name-icon,
-.form-item:focus .feedback-name-icon
+
+.feedback-input:hover + .feedback-name-icon,
+.feedback-input:focus + .feedback-name-icon,
+.feedback-label:hover .feedback-name-icon,
+.feedback-label:focus .feedback-name-icon,
+.feedback-label:hover .feedback-input,
+.feedback-label:focus .feedback-input
 {
   fill: var(--accent-color);
   border-color: var(--accent-color);
@@ -793,19 +804,15 @@ textarea{
 
 .coments .feedback-input {
   padding-left: 16px;
+  resize: none;
 }
-.form-item.coments{
+.feedback-label.coments{
   margin-bottom: 20px;
-}
-
-.form-feedback label{
-  cursor: pointer;
 }
 .checkbox-label {
   display: inline-block;
   height: 24px;
 }
-
 .feedback-ckeckbox {
   position: absolute;
   white-space: nowrap;
